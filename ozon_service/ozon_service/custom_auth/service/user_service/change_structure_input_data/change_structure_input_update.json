@@ -1,0 +1,26 @@
+{
+      "action_type": "save_all",
+      "data_user": {
+      	    "id":"6414996e-f23f-40a5-9e0a-c4920322202e",
+            "name": "unittttt1"
+      },
+      "data_soldier":{
+      	"id":"ef2cb1ce-27ec-4147-9ae0-0b976c7f57e2",
+      	"soldier_surname": "surnaaaaaame",
+      	"personal_number":"123"
+      },
+      "data_soldier_service":{
+      	"id":"efd75d1f-270e-4ab1-8c8e-3f090d38d3ba",
+      	"unit_id":"25d55ad2-83aa-400a-f464-c76d713c07ad",
+      	"unit_name":"name",
+      	"military_rank_code":"123",
+      	"military_rank_name":"name",
+      	"military_category_code":"456",
+      	"military_category_name":"new_test_name"
+      },
+      "data_user_role":{
+      	"id":"7bffc400-cce0-4ae0-b3f8-72551a90c4cc",
+      	"role":"3820831e-94a4-438e-9875-eb0bc1d79fce",
+      	"is_main":true
+      }
+}
