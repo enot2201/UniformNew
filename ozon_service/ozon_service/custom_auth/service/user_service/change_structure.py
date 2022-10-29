@@ -1,6 +1,6 @@
 from datetime import datetime
-from modules.core.apps.custom_auth.service.user_service.base import BaseUserService
-from project_lib.rest.serializers import DynamicSerializerModel
+from ..user_service.base import BaseUserService
+from UniformNew.ozon_service.project_lib.rest.serializers import DynamicSerializerModel
 from rest_framework.generics import get_object_or_404
 
 from ...models import *
