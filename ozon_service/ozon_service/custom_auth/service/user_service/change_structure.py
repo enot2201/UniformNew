@@ -156,7 +156,7 @@ class CreateStructureUser(BaseUserService):
 
     def _save_teacher_department_record(self, university_id: str = None):
         """
-        Создание данных учебной группы
+        Создание данных teacher_department
         """
         group_data = self.action.data_group
         if university_id:
@@ -179,35 +179,6 @@ class CreateStructureUser(BaseUserService):
             instance = StudyGroup.objects.get(pk=group_data.id)
             return self._save_serializer(GroupSerializer, data, instance).data
         return self._save_serializer(GroupSerializer, data).data
-
-    # def _save_all_record(self):
-    #     """
-    #     Создание всех обьектов связаных с user
-    #     """
-    #     user_id = None
-    #     user_data = None
-    #     soldier_service_data = None
-    #     user_role_data = None
-    #     soldier_data = None
-    #     soldier = None
-    #     if self.action.data_user:
-    #         user_id = self.action.data_user.id
-    #         user_data = self._save_user_record()
-    #         if not user_id:
-    #             user_id = get_object_or_404(CustomUser.objects.all(), username=self.action.data_user.username).id
-    #     if self.action.data_soldier:
-    #         soldier_data = self._save_soldier_record(user_id)
-    #         soldier = soldier_data.serializer.instance.id
-    #     if self.action.data_user_role:
-    #         user_role_data = self._save_user_role_record(user_id)
-    #     if self.action.data_soldier_service:
-    #         soldier_service_data = self._save_soldier_service_record(soldier)
-    #     return {
-    #         'user': user_data,
-    #         'user_role_data': user_role_data,
-    #         'soldier': soldier_data,
-    #         'soldier_service': soldier_service_data
-    #     }
 
     def _delete_user_record(self):
         """
